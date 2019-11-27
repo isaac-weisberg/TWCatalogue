@@ -13,6 +13,9 @@
 		FA29A3BF238ED0D20080873A /* JsonDownloadServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */; };
 		FA29A3C1238ED1E50080873A /* CatalogItemCachingServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */; };
 		FA8F7FDF238ED80B000BBCA2 /* CatalogItemsDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F7FDE238ED80B000BBCA2 /* CatalogItemsDownloadService.swift */; };
+		FA8F7FE1238EDA10000BBCA2 /* JsonCachingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F7FE0238EDA10000BBCA2 /* JsonCachingServiceTests.swift */; };
+		FA8F7FE3238EDB20000BBCA2 /* Result+value+error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F7FE2238EDB20000BBCA2 /* Result+value+error.swift */; };
+		FA8F7FE5238EDC7D000BBCA2 /* String+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F7FE4238EDC7D000BBCA2 /* String+random.swift */; };
 		FAA3EDB8238E80AB00AF059A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDB7238E80AB00AF059A /* AppDelegate.swift */; };
 		FAA3EDBF238E80AB00AF059A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA3EDBD238E80AB00AF059A /* Main.storyboard */; };
 		FAA3EDC1238E80AD00AF059A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA3EDC0238E80AD00AF059A /* Assets.xcassets */; };
@@ -63,6 +66,9 @@
 		FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDownloadServiceStub.swift; sourceTree = "<group>"; };
 		FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemCachingServiceStub.swift; sourceTree = "<group>"; };
 		FA8F7FDE238ED80B000BBCA2 /* CatalogItemsDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemsDownloadService.swift; sourceTree = "<group>"; };
+		FA8F7FE0238EDA10000BBCA2 /* JsonCachingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonCachingServiceTests.swift; sourceTree = "<group>"; };
+		FA8F7FE2238EDB20000BBCA2 /* Result+value+error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+value+error.swift"; sourceTree = "<group>"; };
+		FA8F7FE4238EDC7D000BBCA2 /* String+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+random.swift"; sourceTree = "<group>"; };
 		FAA3EDB4238E80AB00AF059A /* TWCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3EDB7238E80AB00AF059A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA3EDBE238E80AB00AF059A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +132,9 @@
 				FA29A3B8238ECFF70080873A /* Info.plist */,
 				FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */,
 				FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */,
+				FA8F7FE0238EDA10000BBCA2 /* JsonCachingServiceTests.swift */,
+				FA8F7FE2238EDB20000BBCA2 /* Result+value+error.swift */,
+				FA8F7FE4238EDC7D000BBCA2 /* String+random.swift */,
 			);
 			path = TWCatalogueTests;
 			sourceTree = "<group>";
@@ -457,6 +466,9 @@
 				FA29A3B7238ECFF70080873A /* CatalogInteractorTests.swift in Sources */,
 				FA29A3C1238ED1E50080873A /* CatalogItemCachingServiceStub.swift in Sources */,
 				FA29A3BF238ED0D20080873A /* JsonDownloadServiceStub.swift in Sources */,
+				FA8F7FE3238EDB20000BBCA2 /* Result+value+error.swift in Sources */,
+				FA8F7FE1238EDA10000BBCA2 /* JsonCachingServiceTests.swift in Sources */,
+				FA8F7FE5238EDC7D000BBCA2 /* String+random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
