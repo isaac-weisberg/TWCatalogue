@@ -71,7 +71,7 @@ class CatalogInteractor: CatalogInteractorProtocol {
     let disposeBag = DisposeBag()
 
     init(_ deps: Dependencies) {
-        let downloadUrl = URL(string: "https://foo.com/bar/baz")!
+        let downloadUrl = URL(string: "https://jsonplaceholder.typicode.com/posts")!
 
         let download: Single<Result<[CatalogItemDTO], JsonDownloadError>>
             = deps.catalogItemsDownloadService.download(from: downloadUrl)

@@ -17,8 +17,8 @@ class ItemDetailCoordinator {
     }
 
     func start() -> Single<Result> {
-        return Single.deferred { [view] in
-            let viewModel = ItemDetailViewModel()
+        return Single.deferred { [view, item] in
+            let viewModel = ItemDetailViewModel(item: item)
             let controller = ItemDetailController.instantiateFromMain()
             controller.viewModel = viewModel
 

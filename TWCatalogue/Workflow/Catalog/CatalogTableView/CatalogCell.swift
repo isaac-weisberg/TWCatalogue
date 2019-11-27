@@ -5,6 +5,9 @@ class CatalogCell: UITableViewCell {
     var viewModel: CatalogItemViewModel!
     var disposeBag: DisposeBag!
 
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var bodyLabel: UILabel!
+    
     let tapGesture = UITapGestureRecognizer()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -24,6 +27,9 @@ class CatalogCell: UITableViewCell {
     func apply(viewModel: CatalogItemViewModel) {
         disposeBag = DisposeBag()
         self.viewModel = viewModel
+
+        titleLabel.text = viewModel.title
+        bodyLabel.text = viewModel.body
 
         tapGesture.rx.event
             .filter { recognizer in

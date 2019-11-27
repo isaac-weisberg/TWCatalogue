@@ -45,9 +45,26 @@
                     <view key="view" contentMode="scaleToFill" id="3wl-D4-xex">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2S9-QT-MDM">
+                                <rect key="frame" x="16" y="60" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7VE-ly-SgS" firstAttribute="trailing" secondItem="2S9-QT-MDM" secondAttribute="trailing" constant="16" id="Nli-ou-Qfw"/>
+                            <constraint firstItem="2S9-QT-MDM" firstAttribute="leading" secondItem="7VE-ly-SgS" secondAttribute="leading" constant="16" id="TsL-z0-pi1"/>
+                            <constraint firstItem="2S9-QT-MDM" firstAttribute="top" secondItem="7VE-ly-SgS" secondAttribute="top" constant="16" id="ffB-cL-YvP"/>
+                            <constraint firstItem="7VE-ly-SgS" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2S9-QT-MDM" secondAttribute="bottom" constant="16" id="jf0-lL-Ncx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7VE-ly-SgS"/>
                     </view>
+                    <connections>
+                        <outlet property="bodyLabel" destination="2S9-QT-MDM" id="0qN-on-L7M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qb-26-Axk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

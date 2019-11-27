@@ -9,11 +9,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CatalogCell" customModule="TWCatalogue" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="438" height="81"/>
+            <rect key="frame" x="0.0" y="0.0" width="438" height="105"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dickweed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty2-H6-5Qd">
-                    <rect key="frame" x="8" y="8" width="422" height="65"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Dickweed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty2-H6-5Qd">
+                    <rect key="frame" x="8" y="8" width="422" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO6-mB-ad9">
+                    <rect key="frame" x="8" y="53" width="422" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -21,13 +27,20 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="hO6-mB-ad9" firstAttribute="top" secondItem="ty2-H6-5Qd" secondAttribute="bottom" constant="8" id="91F-QE-zVT"/>
+                <constraint firstAttribute="trailing" secondItem="hO6-mB-ad9" secondAttribute="trailing" constant="8" id="9qg-66-ZE8"/>
                 <constraint firstItem="ty2-H6-5Qd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="P87-I8-P52"/>
                 <constraint firstItem="ty2-H6-5Qd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="UoL-Ce-tje"/>
+                <constraint firstItem="hO6-mB-ad9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Wd7-mC-OOc"/>
                 <constraint firstAttribute="trailing" secondItem="ty2-H6-5Qd" secondAttribute="trailing" constant="8" id="mmY-q2-djn"/>
-                <constraint firstAttribute="bottom" secondItem="ty2-H6-5Qd" secondAttribute="bottom" constant="8" id="xba-2f-W3D"/>
+                <constraint firstAttribute="bottom" secondItem="hO6-mB-ad9" secondAttribute="bottom" constant="8" id="zxs-G3-g3r"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="155.07246376811597" y="-120.20089285714285"/>
+            <connections>
+                <outlet property="bodyLabel" destination="hO6-mB-ad9" id="HgY-zg-mpk"/>
+                <outlet property="titleLabel" destination="ty2-H6-5Qd" id="wgY-u9-hNm"/>
+            </connections>
+            <point key="canvasLocation" x="155.07246376811597" y="-112.16517857142857"/>
         </view>
     </objects>
 </document>

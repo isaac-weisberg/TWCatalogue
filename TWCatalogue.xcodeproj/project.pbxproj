@@ -128,10 +128,9 @@
 		FA29A3B5238ECFF70080873A /* TWCatalogueTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAB4572E238EF34C007BE02E /* Stubs */,
 				FA29A3B6238ECFF70080873A /* CatalogInteractorTests.swift */,
 				FA29A3B8238ECFF70080873A /* Info.plist */,
-				FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */,
-				FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */,
 				FA8F7FE0238EDA10000BBCA2 /* JsonCachingServiceTests.swift */,
 				FA8F7FE2238EDB20000BBCA2 /* Result+value+error.swift */,
 				FA8F7FE4238EDC7D000BBCA2 /* String+random.swift */,
@@ -274,6 +273,15 @@
 				FAA3EDF4238EA0B400AF059A /* Dependencies.swift */,
 			);
 			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		FAB4572E238EF34C007BE02E /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */,
+				FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
