@@ -40,13 +40,13 @@ struct CatalogViewModel: CatalogViewModelProtocol {
             }
             .observeOn(MainScheduler.instance)
 
+        isLoading = interactor.isLoading
+            .observeOn(MainScheduler.instance)
+
         errorAlert = interactor.noDataError
             .map { error in
                 "Unfortunately, no data could be retrieved. Not from cache. Not from network :("
             }
-            .observeOn(MainScheduler.instance)
-
-        isLoading = interactor.isLoading
             .observeOn(MainScheduler.instance)
 
         reload
