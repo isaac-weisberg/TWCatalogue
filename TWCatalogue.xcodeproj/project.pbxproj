@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E685165363DA89EAEB421B4E /* libPods-TWCatalogue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 625D2CBE330554637BC27EDB /* libPods-TWCatalogue.a */; };
+		FAA3EDB8238E80AB00AF059A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDB7238E80AB00AF059A /* AppDelegate.swift */; };
+		FAA3EDBF238E80AB00AF059A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA3EDBD238E80AB00AF059A /* Main.storyboard */; };
+		FAA3EDC1238E80AD00AF059A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA3EDC0238E80AD00AF059A /* Assets.xcassets */; };
+		FAA3EDC4238E80AD00AF059A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA3EDC2238E80AD00AF059A /* LaunchScreen.storyboard */; };
+		FAA3EDCC238E812200AF059A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDCB238E812200AF059A /* AppCoordinator.swift */; };
+		FAA3EDD5238E82CF00AF059A /* CatalogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDD4238E82CF00AF059A /* CatalogController.swift */; };
+		FAA3EDD9238E840500AF059A /* UIViewController+instantiateFromMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDD8238E840500AF059A /* UIViewController+instantiateFromMain.swift */; };
+		FAA3EDDB238E849800AF059A /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDDA238E849800AF059A /* CatalogViewModel.swift */; };
+		FAA3EDDD238E84ED00AF059A /* CatalogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDDC238E84ED00AF059A /* CatalogItem.swift */; };
+		FAA3EDE0238E85DC00AF059A /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDDF238E85DC00AF059A /* ItemDetailController.swift */; };
+		FAA3EDE2238E861000AF059A /* ItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDE1238E861000AF059A /* ItemDetailViewModel.swift */; };
+		FAA3EDE4238E86B900AF059A /* ItemDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDE3238E86B900AF059A /* ItemDetailCoordinator.swift */; };
+		FAA3EDE6238E93BF00AF059A /* CatalogTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDE5238E93BF00AF059A /* CatalogTableView.swift */; };
+		FAA3EDE8238E941200AF059A /* CatalogItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDE7238E941200AF059A /* CatalogItemViewModel.swift */; };
+		FAA3EDEA238E945500AF059A /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDE9238E945500AF059A /* CatalogCell.swift */; };
+		FAA3EDEC238E948B00AF059A /* CatalogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA3EDEB238E948B00AF059A /* CatalogCell.xib */; };
+		FAA3EDEE238E965D00AF059A /* CatalogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDED238E965D00AF059A /* CatalogInteractor.swift */; };
+		FAA3EDF2238E9B5100AF059A /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF1238E9B5100AF059A /* DownloadService.swift */; };
+		FAA3EDF5238EA0B400AF059A /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF4238EA0B400AF059A /* Dependencies.swift */; };
+		FAA3EDF7238EA11A00AF059A /* CachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF6238EA11A00AF059A /* CachingService.swift */; };
+		FAA3EDF9238EA58400AF059A /* CatalogItemDSO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1CFEEBF547B10DEFA9105D71 /* Pods-TWCatalogue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCatalogue.release.xcconfig"; path = "Target Support Files/Pods-TWCatalogue/Pods-TWCatalogue.release.xcconfig"; sourceTree = "<group>"; };
+		625D2CBE330554637BC27EDB /* libPods-TWCatalogue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCatalogue.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79EA3DBA33F82A85F82583D8 /* Pods-TWCatalogue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCatalogue.debug.xcconfig"; path = "Target Support Files/Pods-TWCatalogue/Pods-TWCatalogue.debug.xcconfig"; sourceTree = "<group>"; };
+		FAA3EDB4238E80AB00AF059A /* TWCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA3EDB7238E80AB00AF059A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAA3EDBE238E80AB00AF059A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAA3EDC0238E80AD00AF059A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA3EDC3238E80AD00AF059A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAA3EDC5238E80AD00AF059A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA3EDCB238E812200AF059A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppCoordinator.swift; path = ../AppCoordinator.swift; sourceTree = "<group>"; };
+		FAA3EDD4238E82CF00AF059A /* CatalogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogController.swift; sourceTree = "<group>"; };
+		FAA3EDD8238E840500AF059A /* UIViewController+instantiateFromMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+instantiateFromMain.swift"; sourceTree = "<group>"; };
+		FAA3EDDA238E849800AF059A /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
+		FAA3EDDC238E84ED00AF059A /* CatalogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItem.swift; sourceTree = "<group>"; };
+		FAA3EDDF238E85DC00AF059A /* ItemDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
+		FAA3EDE1238E861000AF059A /* ItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewModel.swift; sourceTree = "<group>"; };
+		FAA3EDE3238E86B900AF059A /* ItemDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailCoordinator.swift; sourceTree = "<group>"; };
+		FAA3EDE5238E93BF00AF059A /* CatalogTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableView.swift; sourceTree = "<group>"; };
+		FAA3EDE7238E941200AF059A /* CatalogItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemViewModel.swift; sourceTree = "<group>"; };
+		FAA3EDE9238E945500AF059A /* CatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
+		FAA3EDEB238E948B00AF059A /* CatalogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogCell.xib; sourceTree = "<group>"; };
+		FAA3EDED238E965D00AF059A /* CatalogInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogInteractor.swift; sourceTree = "<group>"; };
+		FAA3EDF1238E9B5100AF059A /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		FAA3EDF4238EA0B400AF059A /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		FAA3EDF6238EA11A00AF059A /* CachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingService.swift; sourceTree = "<group>"; };
+		FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemDSO.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAA3EDB1238E80AB00AF059A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E685165363DA89EAEB421B4E /* libPods-TWCatalogue.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		886FDBABD6BC14C179A57462 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				625D2CBE330554637BC27EDB /* libPods-TWCatalogue.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA5410214A0CE1AB54B08BA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79EA3DBA33F82A85F82583D8 /* Pods-TWCatalogue.debug.xcconfig */,
+				1CFEEBF547B10DEFA9105D71 /* Pods-TWCatalogue.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FAA3EDAB238E80AB00AF059A = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDB6238E80AB00AF059A /* TWCatalogue */,
+				FAA3EDB5238E80AB00AF059A /* Products */,
+				FA5410214A0CE1AB54B08BA4 /* Pods */,
+				886FDBABD6BC14C179A57462 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAA3EDB5238E80AB00AF059A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDB4238E80AB00AF059A /* TWCatalogue.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAA3EDB6238E80AB00AF059A /* TWCatalogue */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDF3238EA0A900AF059A /* Dependencies */,
+				FAA3EDD7238E83F700AF059A /* Extensions */,
+				FAA3EDF0238E9AD400AF059A /* Services */,
+				FAA3EDDE238E85AE00AF059A /* Models */,
+				FAA3EDD2238E82B200AF059A /* Workflow */,
+				FAA3EDCD238E826400AF059A /* Coordinator */,
+				FAA3EDB7238E80AB00AF059A /* AppDelegate.swift */,
+				FAA3EDBD238E80AB00AF059A /* Main.storyboard */,
+				FAA3EDC0238E80AD00AF059A /* Assets.xcassets */,
+				FAA3EDC2238E80AD00AF059A /* LaunchScreen.storyboard */,
+				FAA3EDC5238E80AD00AF059A /* Info.plist */,
+			);
+			path = TWCatalogue;
+			sourceTree = "<group>";
+		};
+		FAA3EDCD238E826400AF059A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDCB238E812200AF059A /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FAA3EDD2238E82B200AF059A /* Workflow */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDD6238E83E900AF059A /* ItemDetail */,
+				FAA3EDD3238E82C100AF059A /* Catalog */,
+			);
+			path = Workflow;
+			sourceTree = "<group>";
+		};
+		FAA3EDD3238E82C100AF059A /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDEF238E9A5500AF059A /* CatalogTableView */,
+				FAA3EDD4238E82CF00AF059A /* CatalogController.swift */,
+				FAA3EDDA238E849800AF059A /* CatalogViewModel.swift */,
+				FAA3EDED238E965D00AF059A /* CatalogInteractor.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		FAA3EDD6238E83E900AF059A /* ItemDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDDF238E85DC00AF059A /* ItemDetailController.swift */,
+				FAA3EDE1238E861000AF059A /* ItemDetailViewModel.swift */,
+				FAA3EDE3238E86B900AF059A /* ItemDetailCoordinator.swift */,
+			);
+			path = ItemDetail;
+			sourceTree = "<group>";
+		};
+		FAA3EDD7238E83F700AF059A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDD8238E840500AF059A /* UIViewController+instantiateFromMain.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAA3EDDE238E85AE00AF059A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDDC238E84ED00AF059A /* CatalogItem.swift */,
+				FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAA3EDEF238E9A5500AF059A /* CatalogTableView */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDE9238E945500AF059A /* CatalogCell.swift */,
+				FAA3EDEB238E948B00AF059A /* CatalogCell.xib */,
+				FAA3EDE7238E941200AF059A /* CatalogItemViewModel.swift */,
+				FAA3EDE5238E93BF00AF059A /* CatalogTableView.swift */,
+			);
+			path = CatalogTableView;
+			sourceTree = "<group>";
+		};
+		FAA3EDF0238E9AD400AF059A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDF1238E9B5100AF059A /* DownloadService.swift */,
+				FAA3EDF6238EA11A00AF059A /* CachingService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FAA3EDF3238EA0A900AF059A /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3EDF4238EA0B400AF059A /* Dependencies.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAA3EDB3238E80AB00AF059A /* TWCatalogue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA3EDC8238E80AD00AF059A /* Build configuration list for PBXNativeTarget "TWCatalogue" */;
+			buildPhases = (
+				3273E87E33EEED67F36DC78E /* [CP] Check Pods Manifest.lock */,
+				FAA3EDB0238E80AB00AF059A /* Sources */,
+				FAA3EDB1238E80AB00AF059A /* Frameworks */,
+				FAA3EDB2238E80AB00AF059A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TWCatalogue;
+			productName = TWCatalogue;
+			productReference = FAA3EDB4238E80AB00AF059A /* TWCatalogue.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAA3EDAC238E80AB00AF059A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Isaac Weisberg";
+				TargetAttributes = {
+					FAA3EDB3238E80AB00AF059A = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = FAA3EDAF238E80AB00AF059A /* Build configuration list for PBXProject "TWCatalogue" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAA3EDAB238E80AB00AF059A;
+			productRefGroup = FAA3EDB5238E80AB00AF059A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAA3EDB3238E80AB00AF059A /* TWCatalogue */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAA3EDB2238E80AB00AF059A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA3EDC4238E80AD00AF059A /* LaunchScreen.storyboard in Resources */,
+				FAA3EDC1238E80AD00AF059A /* Assets.xcassets in Resources */,
+				FAA3EDBF238E80AB00AF059A /* Main.storyboard in Resources */,
+				FAA3EDEC238E948B00AF059A /* CatalogCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3273E87E33EEED67F36DC78E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TWCatalogue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAA3EDB0238E80AB00AF059A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA3EDDD238E84ED00AF059A /* CatalogItem.swift in Sources */,
+				FAA3EDF2238E9B5100AF059A /* DownloadService.swift in Sources */,
+				FAA3EDCC238E812200AF059A /* AppCoordinator.swift in Sources */,
+				FAA3EDF5238EA0B400AF059A /* Dependencies.swift in Sources */,
+				FAA3EDE2238E861000AF059A /* ItemDetailViewModel.swift in Sources */,
+				FAA3EDEA238E945500AF059A /* CatalogCell.swift in Sources */,
+				FAA3EDE6238E93BF00AF059A /* CatalogTableView.swift in Sources */,
+				FAA3EDD5238E82CF00AF059A /* CatalogController.swift in Sources */,
+				FAA3EDD9238E840500AF059A /* UIViewController+instantiateFromMain.swift in Sources */,
+				FAA3EDDB238E849800AF059A /* CatalogViewModel.swift in Sources */,
+				FAA3EDE0238E85DC00AF059A /* ItemDetailController.swift in Sources */,
+				FAA3EDE4238E86B900AF059A /* ItemDetailCoordinator.swift in Sources */,
+				FAA3EDEE238E965D00AF059A /* CatalogInteractor.swift in Sources */,
+				FAA3EDF7238EA11A00AF059A /* CachingService.swift in Sources */,
+				FAA3EDF9238EA58400AF059A /* CatalogItemDSO.swift in Sources */,
+				FAA3EDB8238E80AB00AF059A /* AppDelegate.swift in Sources */,
+				FAA3EDE8238E941200AF059A /* CatalogItemViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAA3EDBD238E80AB00AF059A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA3EDBE238E80AB00AF059A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAA3EDC2238E80AD00AF059A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA3EDC3238E80AD00AF059A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAA3EDC6238E80AD00AF059A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAA3EDC7238E80AD00AF059A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAA3EDC9238E80AD00AF059A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79EA3DBA33F82A85F82583D8 /* Pods-TWCatalogue.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UGM934F4MU;
+				INFOPLIST_FILE = TWCatalogue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.caroline-weisberg.TWCatalogue";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAA3EDCA238E80AD00AF059A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CFEEBF547B10DEFA9105D71 /* Pods-TWCatalogue.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UGM934F4MU;
+				INFOPLIST_FILE = TWCatalogue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.caroline-weisberg.TWCatalogue";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAA3EDAF238E80AB00AF059A /* Build configuration list for PBXProject "TWCatalogue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA3EDC6238E80AD00AF059A /* Debug */,
+				FAA3EDC7238E80AD00AF059A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA3EDC8238E80AD00AF059A /* Build configuration list for PBXNativeTarget "TWCatalogue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA3EDC9238E80AD00AF059A /* Debug */,
+				FAA3EDCA238E80AD00AF059A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAA3EDAC238E80AB00AF059A /* Project object */;
+}

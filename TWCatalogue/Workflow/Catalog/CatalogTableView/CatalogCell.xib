@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CatalogCell" customModule="TWCatalogue" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="81"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dickweed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty2-H6-5Qd">
+                    <rect key="frame" x="8" y="8" width="422" height="65"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ty2-H6-5Qd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="P87-I8-P52"/>
+                <constraint firstItem="ty2-H6-5Qd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="UoL-Ce-tje"/>
+                <constraint firstAttribute="trailing" secondItem="ty2-H6-5Qd" secondAttribute="trailing" constant="8" id="mmY-q2-djn"/>
+                <constraint firstAttribute="bottom" secondItem="ty2-H6-5Qd" secondAttribute="bottom" constant="8" id="xba-2f-W3D"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="155.07246376811597" y="-120.20089285714285"/>
+        </view>
+    </objects>
+</document>
