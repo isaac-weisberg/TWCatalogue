@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		FA29A3B7238ECFF70080873A /* CatalogInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3B6238ECFF70080873A /* CatalogInteractorTests.swift */; };
 		FA29A3BF238ED0D20080873A /* JsonDownloadServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */; };
 		FA29A3C1238ED1E50080873A /* CatalogItemCachingServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */; };
+		FA8F7FDF238ED80B000BBCA2 /* CatalogItemsDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F7FDE238ED80B000BBCA2 /* CatalogItemsDownloadService.swift */; };
 		FAA3EDB8238E80AB00AF059A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDB7238E80AB00AF059A /* AppDelegate.swift */; };
 		FAA3EDBF238E80AB00AF059A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA3EDBD238E80AB00AF059A /* Main.storyboard */; };
 		FAA3EDC1238E80AD00AF059A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA3EDC0238E80AD00AF059A /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		FA29A3B8238ECFF70080873A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDownloadServiceStub.swift; sourceTree = "<group>"; };
 		FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemCachingServiceStub.swift; sourceTree = "<group>"; };
+		FA8F7FDE238ED80B000BBCA2 /* CatalogItemsDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemsDownloadService.swift; sourceTree = "<group>"; };
 		FAA3EDB4238E80AB00AF059A /* TWCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3EDB7238E80AB00AF059A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA3EDBE238E80AB00AF059A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				FAA3EDF1238E9B5100AF059A /* DownloadService.swift */,
 				FAA3EDF6238EA11A00AF059A /* JsonCachingService.swift */,
 				FAA3EDFA238EB3D900AF059A /* JsonDownloadService.swift */,
+				FA8F7FDE238ED80B000BBCA2 /* CatalogItemsDownloadService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				FAA3EDF5238EA0B400AF059A /* Dependencies.swift in Sources */,
 				FAA3EDE2238E861000AF059A /* ItemDetailViewModel.swift in Sources */,
 				FAA3EDEA238E945500AF059A /* CatalogCell.swift in Sources */,
+				FA8F7FDF238ED80B000BBCA2 /* CatalogItemsDownloadService.swift in Sources */,
 				FAA3EDE6238E93BF00AF059A /* CatalogTableView.swift in Sources */,
 				FAA3EDD5238E82CF00AF059A /* CatalogController.swift in Sources */,
 				FAA3EDD9238E840500AF059A /* UIViewController+instantiateFromMain.swift in Sources */,

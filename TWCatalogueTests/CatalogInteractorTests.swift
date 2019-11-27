@@ -5,13 +5,13 @@ import XCTest
 class CatalogInteractorTests: XCTestCase {
     struct CatalogInteractorDeps: CatalogInteractor.Dependencies {
         let catalogItemCachingService: JsonCachingServiceAbstract<[CatalogItemDSO]>
-        let jsonDownloadService: JsonDownloadServiceProtocol
+        let catalogItemsDownloadService: CatalogItemsDownloadServiceProtocol
     }
 
     func testNoDataError() {
         let deps = CatalogInteractorDeps(
             catalogItemCachingService: CatalogItemCachingStub(),
-            jsonDownloadService: JsonDownloadServiceStub<[CatalogItemDTO]>(stubResult: .failure(.badStatusCode(500)))
+            catalogItemsDownloadService: CatalogItemsDownloadServiceStub(stubResult: .failure(.badStatusCode(500)))
         )
 
         let interactor = CatalogInteractor(deps)
@@ -35,9 +35,7 @@ class CatalogInteractorTests: XCTestCase {
     func testWhenNoDataIsNotThrown() {
         let deps = CatalogInteractorDeps(
             catalogItemCachingService: CatalogItemCachingStub(),
-            jsonDownloadService: JsonDownloadServiceStub(stubResult: .success([
-                CatalogItemDTO()
-            ]))
+            catalogItemsDownloadService: CatalogItemsDownloadServiceStub(stubResult: .success([ ]))
         )
 
         let interactor = CatalogInteractor(deps)

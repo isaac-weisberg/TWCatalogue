@@ -2,15 +2,15 @@ import RxSwift
 import Foundation
 @testable import TWCatalogue
 
-class JsonDownloadServiceStub<LockModel>: JsonDownloadServiceProtocol {
-    func download<Model: Decodable>(from url: URL) -> PrimitiveSequence<SingleTrait, Result<Model, JsonDownloadError>> {
-        return Single.just(stubResult as! Result<Model, JsonDownloadError>)
+class CatalogItemsDownloadServiceStub: CatalogItemsDownloadServiceProtocol {
+    func download(from url: URL) -> Single<Result<[CatalogItemDTO], JsonDownloadError>> {
+        return Single.just(stubResult)
             .observeOn(ConcurrentDispatchQueueScheduler(queue: .global()))
     }
 
-    init(stubResult: Result<LockModel, JsonDownloadError>) {
+    init(stubResult: Result<[CatalogItemDTO], JsonDownloadError>) {
         self.stubResult = stubResult
     }
 
-    let stubResult: Result<LockModel, JsonDownloadError>
+    let stubResult: Result<[CatalogItemDTO], JsonDownloadError>
 }

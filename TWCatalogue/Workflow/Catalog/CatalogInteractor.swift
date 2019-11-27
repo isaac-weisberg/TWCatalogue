@@ -20,7 +20,7 @@ protocol CatalogInteractorProtocol {
 
 class CatalogInteractor: CatalogInteractorProtocol {
     typealias Dependencies = HasCatalogItemCachingService
-        & HasJsonDownloadService
+        & HasCatalogItemsDownloadService
 
     enum State {
         enum CachingWriteResult {
@@ -74,7 +74,7 @@ class CatalogInteractor: CatalogInteractorProtocol {
         let downloadUrl = URL(string: "https://foo.com/bar/baz")!
 
         let download: Single<Result<[CatalogItemDTO], JsonDownloadError>>
-            = deps.jsonDownloadService.download(from: downloadUrl)
+            = deps.catalogItemsDownloadService.download(from: downloadUrl)
 
         let cacheWrite = { (items: [CatalogItem]) -> Single<Result<Void, JsonCachingWriteError>> in
             Single.deferred {
