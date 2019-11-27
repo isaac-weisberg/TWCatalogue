@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E685165363DA89EAEB421B4E /* libPods-TWCatalogue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 625D2CBE330554637BC27EDB /* libPods-TWCatalogue.a */; };
+		36D3BD6DC9C316AD5834DB1F /* Pods_TWCatalogue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A414B22255E7A6930AA725CB /* Pods_TWCatalogue.framework */; };
+		5D1956E401E5C0B8D3273069 /* Pods_TWCatalogueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B475F0BA1AD3F29E562A7FDF /* Pods_TWCatalogueTests.framework */; };
+		FA29A3B7238ECFF70080873A /* CatalogInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3B6238ECFF70080873A /* CatalogInteractorTests.swift */; };
+		FA29A3BF238ED0D20080873A /* JsonDownloadServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */; };
+		FA29A3C1238ED1E50080873A /* CatalogItemCachingServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */; };
 		FAA3EDB8238E80AB00AF059A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDB7238E80AB00AF059A /* AppDelegate.swift */; };
 		FAA3EDBF238E80AB00AF059A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA3EDBD238E80AB00AF059A /* Main.storyboard */; };
 		FAA3EDC1238E80AD00AF059A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA3EDC0238E80AD00AF059A /* Assets.xcassets */; };
@@ -33,10 +37,30 @@
 		FACE13C7238EB8360072477A /* CatalogItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE13C6238EB8360072477A /* CatalogItemDTO.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FA29A3B9238ECFF70080873A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA3EDAC238E80AB00AF059A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAA3EDB3238E80AB00AF059A;
+			remoteInfo = TWCatalogue;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1049DD85931F2CB0A41CB794 /* Pods-TWCatalogueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCatalogueTests.release.xcconfig"; path = "Target Support Files/Pods-TWCatalogueTests/Pods-TWCatalogueTests.release.xcconfig"; sourceTree = "<group>"; };
 		1CFEEBF547B10DEFA9105D71 /* Pods-TWCatalogue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCatalogue.release.xcconfig"; path = "Target Support Files/Pods-TWCatalogue/Pods-TWCatalogue.release.xcconfig"; sourceTree = "<group>"; };
-		625D2CBE330554637BC27EDB /* libPods-TWCatalogue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCatalogue.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2289D0776406779EE4C62F03 /* Pods-TWCatalogueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCatalogueTests.debug.xcconfig"; path = "Target Support Files/Pods-TWCatalogueTests/Pods-TWCatalogueTests.debug.xcconfig"; sourceTree = "<group>"; };
+		76A560BD9E01E3A1F3C89286 /* Pods-TWCatalogue-TWCatalogueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCatalogue-TWCatalogueTests.debug.xcconfig"; path = "Target Support Files/Pods-TWCatalogue-TWCatalogueTests/Pods-TWCatalogue-TWCatalogueTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79EA3DBA33F82A85F82583D8 /* Pods-TWCatalogue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCatalogue.debug.xcconfig"; path = "Target Support Files/Pods-TWCatalogue/Pods-TWCatalogue.debug.xcconfig"; sourceTree = "<group>"; };
+		A414B22255E7A6930AA725CB /* Pods_TWCatalogue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWCatalogue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B475F0BA1AD3F29E562A7FDF /* Pods_TWCatalogueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWCatalogueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EABEE6F35A09A025BD7220C2 /* Pods-TWCatalogue-TWCatalogueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCatalogue-TWCatalogueTests.release.xcconfig"; path = "Target Support Files/Pods-TWCatalogue-TWCatalogueTests/Pods-TWCatalogue-TWCatalogueTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA29A3B4238ECFF70080873A /* TWCatalogueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWCatalogueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA29A3B6238ECFF70080873A /* CatalogInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogInteractorTests.swift; sourceTree = "<group>"; };
+		FA29A3B8238ECFF70080873A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDownloadServiceStub.swift; sourceTree = "<group>"; };
+		FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemCachingServiceStub.swift; sourceTree = "<group>"; };
 		FAA3EDB4238E80AB00AF059A /* TWCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3EDB7238E80AB00AF059A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA3EDBE238E80AB00AF059A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,11 +89,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA29A3B1238ECFF70080873A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D1956E401E5C0B8D3273069 /* Pods_TWCatalogueTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAA3EDB1238E80AB00AF059A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E685165363DA89EAEB421B4E /* libPods-TWCatalogue.a in Frameworks */,
+				36D3BD6DC9C316AD5834DB1F /* Pods_TWCatalogue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,9 +111,21 @@
 		886FDBABD6BC14C179A57462 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				625D2CBE330554637BC27EDB /* libPods-TWCatalogue.a */,
+				A414B22255E7A6930AA725CB /* Pods_TWCatalogue.framework */,
+				B475F0BA1AD3F29E562A7FDF /* Pods_TWCatalogueTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA29A3B5238ECFF70080873A /* TWCatalogueTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA29A3B6238ECFF70080873A /* CatalogInteractorTests.swift */,
+				FA29A3B8238ECFF70080873A /* Info.plist */,
+				FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */,
+				FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */,
+			);
+			path = TWCatalogueTests;
 			sourceTree = "<group>";
 		};
 		FA5410214A0CE1AB54B08BA4 /* Pods */ = {
@@ -89,6 +133,10 @@
 			children = (
 				79EA3DBA33F82A85F82583D8 /* Pods-TWCatalogue.debug.xcconfig */,
 				1CFEEBF547B10DEFA9105D71 /* Pods-TWCatalogue.release.xcconfig */,
+				76A560BD9E01E3A1F3C89286 /* Pods-TWCatalogue-TWCatalogueTests.debug.xcconfig */,
+				EABEE6F35A09A025BD7220C2 /* Pods-TWCatalogue-TWCatalogueTests.release.xcconfig */,
+				2289D0776406779EE4C62F03 /* Pods-TWCatalogueTests.debug.xcconfig */,
+				1049DD85931F2CB0A41CB794 /* Pods-TWCatalogueTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -97,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA3EDB6238E80AB00AF059A /* TWCatalogue */,
+				FA29A3B5238ECFF70080873A /* TWCatalogueTests */,
 				FAA3EDB5238E80AB00AF059A /* Products */,
 				FA5410214A0CE1AB54B08BA4 /* Pods */,
 				886FDBABD6BC14C179A57462 /* Frameworks */,
@@ -107,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA3EDB4238E80AB00AF059A /* TWCatalogue.app */,
+				FA29A3B4238ECFF70080873A /* TWCatalogueTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +267,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FA29A3B3238ECFF70080873A /* TWCatalogueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA29A3BD238ECFF70080873A /* Build configuration list for PBXNativeTarget "TWCatalogueTests" */;
+			buildPhases = (
+				F40E1BC12E7EA3ADD215E650 /* [CP] Check Pods Manifest.lock */,
+				FA29A3B0238ECFF70080873A /* Sources */,
+				FA29A3B1238ECFF70080873A /* Frameworks */,
+				FA29A3B2238ECFF70080873A /* Resources */,
+				AA3CBF8F98A55E2500E2A5B1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA29A3BA238ECFF70080873A /* PBXTargetDependency */,
+			);
+			name = TWCatalogueTests;
+			productName = TWCatalogueTests;
+			productReference = FA29A3B4238ECFF70080873A /* TWCatalogueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FAA3EDB3238E80AB00AF059A /* TWCatalogue */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAA3EDC8238E80AD00AF059A /* Build configuration list for PBXNativeTarget "TWCatalogue" */;
@@ -225,6 +295,7 @@
 				FAA3EDB0238E80AB00AF059A /* Sources */,
 				FAA3EDB1238E80AB00AF059A /* Frameworks */,
 				FAA3EDB2238E80AB00AF059A /* Resources */,
+				EBEBAE22061A9C8C2AB58731 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,6 +316,10 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Isaac Weisberg";
 				TargetAttributes = {
+					FA29A3B3238ECFF70080873A = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = FAA3EDB3238E80AB00AF059A;
+					};
 					FAA3EDB3238E80AB00AF059A = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -264,11 +339,19 @@
 			projectRoot = "";
 			targets = (
 				FAA3EDB3238E80AB00AF059A /* TWCatalogue */,
+				FA29A3B3238ECFF70080873A /* TWCatalogueTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FA29A3B2238ECFF70080873A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAA3EDB2238E80AB00AF059A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,9 +388,75 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AA3CBF8F98A55E2500E2A5B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWCatalogueTests/Pods-TWCatalogueTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWCatalogueTests/Pods-TWCatalogueTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TWCatalogueTests/Pods-TWCatalogueTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBEBAE22061A9C8C2AB58731 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWCatalogue/Pods-TWCatalogue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWCatalogue/Pods-TWCatalogue-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TWCatalogue/Pods-TWCatalogue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F40E1BC12E7EA3ADD215E650 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TWCatalogueTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA29A3B0238ECFF70080873A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA29A3B7238ECFF70080873A /* CatalogInteractorTests.swift in Sources */,
+				FA29A3C1238ED1E50080873A /* CatalogItemCachingServiceStub.swift in Sources */,
+				FA29A3BF238ED0D20080873A /* JsonDownloadServiceStub.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAA3EDB0238E80AB00AF059A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,6 +485,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FA29A3BA238ECFF70080873A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAA3EDB3238E80AB00AF059A /* TWCatalogue */;
+			targetProxy = FA29A3B9238ECFF70080873A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		FAA3EDBD238E80AB00AF059A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -356,6 +513,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FA29A3BB238ECFF70080873A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2289D0776406779EE4C62F03 /* Pods-TWCatalogueTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UGM934F4MU;
+				INFOPLIST_FILE = TWCatalogueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.caroline-weisberg.TWCatalogueTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TWCatalogue.app/TWCatalogue";
+			};
+			name = Debug;
+		};
+		FA29A3BC238ECFF70080873A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1049DD85931F2CB0A41CB794 /* Pods-TWCatalogueTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UGM934F4MU;
+				INFOPLIST_FILE = TWCatalogueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.caroline-weisberg.TWCatalogueTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TWCatalogue.app/TWCatalogue";
+			};
+			name = Release;
+		};
 		FAA3EDC6238E80AD00AF059A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -511,6 +710,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA29A3BD238ECFF70080873A /* Build configuration list for PBXNativeTarget "TWCatalogueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA29A3BB238ECFF70080873A /* Debug */,
+				FA29A3BC238ECFF70080873A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FAA3EDAF238E80AB00AF059A /* Build configuration list for PBXProject "TWCatalogue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
