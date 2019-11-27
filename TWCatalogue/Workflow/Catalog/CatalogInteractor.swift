@@ -200,8 +200,7 @@ class CatalogInteractor: CatalogInteractorProtocol {
 
         isLoading = state
             .map { state in
-                print("isLoading", state.isLoading)
-                return state.isLoading
+                state.isLoading
             }
             .distinctUntilChanged()
 
