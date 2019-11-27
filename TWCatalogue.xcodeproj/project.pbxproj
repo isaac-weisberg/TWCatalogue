@@ -27,7 +27,7 @@
 		FAA3EDEE238E965D00AF059A /* CatalogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDED238E965D00AF059A /* CatalogInteractor.swift */; };
 		FAA3EDF2238E9B5100AF059A /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF1238E9B5100AF059A /* DownloadService.swift */; };
 		FAA3EDF5238EA0B400AF059A /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF4238EA0B400AF059A /* Dependencies.swift */; };
-		FAA3EDF7238EA11A00AF059A /* CachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF6238EA11A00AF059A /* CachingService.swift */; };
+		FAA3EDF7238EA11A00AF059A /* JsonCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF6238EA11A00AF059A /* JsonCachingService.swift */; };
 		FAA3EDF9238EA58400AF059A /* CatalogItemDSO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,7 @@
 		FAA3EDED238E965D00AF059A /* CatalogInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogInteractor.swift; sourceTree = "<group>"; };
 		FAA3EDF1238E9B5100AF059A /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		FAA3EDF4238EA0B400AF059A /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
-		FAA3EDF6238EA11A00AF059A /* CachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingService.swift; sourceTree = "<group>"; };
+		FAA3EDF6238EA11A00AF059A /* JsonCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonCachingService.swift; sourceTree = "<group>"; };
 		FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemDSO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA3EDF1238E9B5100AF059A /* DownloadService.swift */,
-				FAA3EDF6238EA11A00AF059A /* CachingService.swift */,
+				FAA3EDF6238EA11A00AF059A /* JsonCachingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 				FAA3EDE0238E85DC00AF059A /* ItemDetailController.swift in Sources */,
 				FAA3EDE4238E86B900AF059A /* ItemDetailCoordinator.swift in Sources */,
 				FAA3EDEE238E965D00AF059A /* CatalogInteractor.swift in Sources */,
-				FAA3EDF7238EA11A00AF059A /* CachingService.swift in Sources */,
+				FAA3EDF7238EA11A00AF059A /* JsonCachingService.swift in Sources */,
 				FAA3EDF9238EA58400AF059A /* CatalogItemDSO.swift in Sources */,
 				FAA3EDB8238E80AB00AF059A /* AppDelegate.swift in Sources */,
 				FAA3EDE8238E941200AF059A /* CatalogItemViewModel.swift in Sources */,

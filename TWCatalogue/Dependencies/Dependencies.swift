@@ -3,7 +3,7 @@ protocol HasDownloadService {
 }
 
 protocol HasCatalogItemCachingService {
-    var catalogItemCachingService: CachingServiceAbstract<CatalogItemDSO> { get }
+    var catalogItemCachingService: JsonCachingServiceAbstract<CatalogItemDSO> { get }
 }
 
 typealias HasAllDependencies = HasDownloadService
@@ -11,10 +11,10 @@ typealias HasAllDependencies = HasDownloadService
 
 class DependenciesDefault: HasAllDependencies {
     let downloadService: DownloadServiceProtocol
-    let catalogItemCachingService: CachingServiceAbstract<CatalogItemDSO>
+    let catalogItemCachingService: JsonCachingServiceAbstract<CatalogItemDSO>
 
     init() {
         downloadService = DownloadService(urlSession: .shared)
-        catalogItemCachingService = CachingService(container: "this_cache_is_4_catalog_items")
+        catalogItemCachingService = JsonCachingService(container: "this_cache_is_4_catalog_items")
     }
 }

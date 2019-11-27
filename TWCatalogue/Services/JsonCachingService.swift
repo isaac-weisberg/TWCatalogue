@@ -1,9 +1,7 @@
 import Foundation
 import Dispatch
 
-
-class CachingServiceAbstract<Model: Codable> {
-
+class JsonCachingServiceAbstract<Model: Codable> {
     enum ReadError: Error {
         case dataRead(Error)
         case jsonDecoding(Error)
@@ -23,7 +21,7 @@ class CachingServiceAbstract<Model: Codable> {
     }
 }
 
-class CachingService<Model: Codable>: CachingServiceAbstract<Model> {
+class JsonCachingService<Model: Codable>: JsonCachingServiceAbstract<Model> {
     let containerUrl: URL
 
     let queue = DispatchQueue(label: "caching.service", qos: .default, attributes: [.concurrent])
