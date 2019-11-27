@@ -12,6 +12,10 @@ protocol CatalogInteractorProtocol {
     var noDataError: Observable<CatalogInteractorNoDataError> { get }
 
     var isLoading: Observable<Bool> { get }
+
+    var navigation: CatalogInteractorNavigation { get }
+
+    var requestDetail: PublishSubject<CatalogItem> { get }
 }
 
 class CatalogInteractor: CatalogInteractorProtocol {
@@ -59,9 +63,9 @@ class CatalogInteractor: CatalogInteractorProtocol {
     let items: Observable<[CatalogItem]>
     let isLoading: Observable<Bool>
     let noDataError: Observable<CatalogInteractorNoDataError>
+    let navigation: CatalogInteractorNavigation
 
     let requestDetail = PublishSubject<CatalogItem>()
-    let navigation: CatalogInteractorNavigation
     let reloadRelay = PublishSubject<Void>()
 
     let disposeBag = DisposeBag()
