@@ -49,7 +49,7 @@ class CatalogInteractorTests: XCTestCase {
             .takeUntil(delay)
             .toArray()
             .subscribe(onSuccess: { errorsThrown in
-                XCTAssertEqual(errorsThrown.count, 0, "Should've not thrown")
+                XCTAssertEqual(errorsThrown.count, 0, "Should've not thrown a single error")
                 exp.fulfill()
             })
 
