@@ -1,4 +1,4 @@
-class CatalogItem {
+struct CatalogItem: Equatable {
     let id: Int
     let userId: Int
     let title: String

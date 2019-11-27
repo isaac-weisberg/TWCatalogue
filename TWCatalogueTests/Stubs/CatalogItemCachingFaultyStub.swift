@@ -1,6 +1,6 @@
 @testable import TWCatalogue
 
-class CatalogItemCachingStub: JsonCachingServiceAbstract<[CatalogItemDSO]> {
+class CatalogItemCachingFaultyStub: JsonCachingServiceAbstract<[CatalogItemDSO]> {
     struct FakeReadError: Error { }
 
     override func read() -> Result<[CatalogItemDSO], JsonCachingReadError> {

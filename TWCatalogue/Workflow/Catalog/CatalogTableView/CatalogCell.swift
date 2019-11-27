@@ -36,7 +36,6 @@ class CatalogCell: UITableViewCell {
                 recognizer.state == .recognized
             }
             .map{ _ in () }
-            .debug()
             .bind(to: viewModel.detailRequest)
             .disposed(by: disposeBag)
     }

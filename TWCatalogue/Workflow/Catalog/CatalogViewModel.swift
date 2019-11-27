@@ -1,5 +1,4 @@
 import RxSwift
-import RxCocoa
 
 protocol CatalogViewModelProtocol {
     var catalogItems: Observable<[CatalogItemViewModel]> { get }
@@ -7,6 +6,8 @@ protocol CatalogViewModelProtocol {
     var errorAlert: Observable<String> { get }
 
     var isLoading: Observable<Bool> { get }
+
+    var reload: PublishSubject<Void> { get }
 }
 
 struct CatalogViewModel: CatalogViewModelProtocol {
@@ -15,6 +16,10 @@ struct CatalogViewModel: CatalogViewModelProtocol {
     let errorAlert: Observable<String>
 
     let isLoading: Observable<Bool>
+
+    let reload = PublishSubject<Void>()
+
+    let disposeBag = DisposeBag()
 
     init(interactor: CatalogInteractorProtocol) {
         catalogItems = interactor.items
@@ -36,12 +41,16 @@ struct CatalogViewModel: CatalogViewModelProtocol {
             .observeOn(MainScheduler.instance)
 
         errorAlert = interactor.noDataError
-            .observeOn(MainScheduler.instance)
             .map { error in
                 "Unfortunately, no data could be retrieved. Not from cache. Not from network :("
             }
+            .observeOn(MainScheduler.instance)
 
         isLoading = interactor.isLoading
             .observeOn(MainScheduler.instance)
+
+        reload
+            .bind(to: interactor.reloadRelay)
+            .disposed(by: disposeBag)
     }
 }

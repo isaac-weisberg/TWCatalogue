@@ -16,6 +16,8 @@ protocol CatalogInteractorProtocol {
     var navigation: CatalogInteractorNavigation { get }
 
     var requestDetail: PublishSubject<CatalogItem> { get }
+
+    var reloadRelay: PublishSubject<Void> { get }
 }
 
 class CatalogInteractor: CatalogInteractorProtocol {
@@ -38,6 +40,8 @@ class CatalogInteractor: CatalogInteractorProtocol {
         case downloadFailed(reason: JsonDownloadError, cacheRead: CachingReadResult)
         case loading(lastItems: [CatalogItem])
 
+        case idle
+
         var getAvailableItems: [CatalogItem] {
             switch self {
             case .downloaded(let items, cacheWrite: _):
@@ -48,13 +52,15 @@ class CatalogInteractor: CatalogInteractorProtocol {
                 return items
             case .downloadFailed(reason: _, cacheRead: .failed(let lastItems, reason: _)):
                 return lastItems
+            case .idle:
+                return []
             }
         }
         var isLoading: Bool {
             switch self {
             case .loading:
                 return true
-            case .downloaded, .downloadFailed:
+            case .downloaded, .downloadFailed, .idle:
                 return false
             }
         }
@@ -94,14 +100,14 @@ class CatalogInteractor: CatalogInteractorProtocol {
             })
         }
 
-        let state = BehaviorSubject<State>(value: .loading(lastItems: []))
+        let state = BehaviorSubject<State>(value: .idle)
 
         let downloadHappened = state
             .flatMapLatest { state -> Single<[CatalogItem]> in
                 switch state {
                 case .loading(let lastItems):
                     return .just(lastItems)
-                case .downloaded, .downloadFailed:
+                case .downloaded, .downloadFailed, .idle:
                     return .never()
                 }
             }
@@ -190,18 +196,21 @@ class CatalogInteractor: CatalogInteractorProtocol {
             .map { state in
                 state.getAvailableItems
             }
+            .distinctUntilChanged()
 
         isLoading = state
             .map { state in
-                state.isLoading
+                print("isLoading", state.isLoading)
+                return state.isLoading
             }
+            .distinctUntilChanged()
 
         noDataError = state
             .flatMapLatest { state -> Single<CatalogInteractorNoDataError> in
                 switch state {
                 case .downloadFailed(reason: _, cacheRead: CatalogInteractor.State.CachingReadResult.failed):
                     return .just(CatalogInteractorNoDataError())
-                case .downloaded, .loading, .downloadFailed(reason: _, .success):
+                case .downloaded, .loading, .downloadFailed(reason: _, .success), .idle:
                     return .never()
                 }
             }

@@ -15,5 +15,13 @@ class CatalogController: UIViewController {
         viewModel.catalogItems
             .bind(to: tableView.items)
             .disposed(by: disposeBag)
+
+        viewModel.isLoading
+            .bind(onNext: { isLoading in
+                print("isLoading = \(isLoading)")
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.reload.onNext(())
     }
 }

@@ -10,8 +10,8 @@
 		36D3BD6DC9C316AD5834DB1F /* Pods_TWCatalogue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A414B22255E7A6930AA725CB /* Pods_TWCatalogue.framework */; };
 		5D1956E401E5C0B8D3273069 /* Pods_TWCatalogueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B475F0BA1AD3F29E562A7FDF /* Pods_TWCatalogueTests.framework */; };
 		FA29A3B7238ECFF70080873A /* CatalogInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3B6238ECFF70080873A /* CatalogInteractorTests.swift */; };
-		FA29A3BF238ED0D20080873A /* JsonDownloadServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */; };
-		FA29A3C1238ED1E50080873A /* CatalogItemCachingServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */; };
+		FA29A3BF238ED0D20080873A /* CatalogItemsDownloadServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3BE238ED0D20080873A /* CatalogItemsDownloadServiceStub.swift */; };
+		FA29A3C1238ED1E50080873A /* CatalogItemCachingFaultyStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29A3C0238ED1E50080873A /* CatalogItemCachingFaultyStub.swift */; };
 		FA8F7FDF238ED80B000BBCA2 /* CatalogItemsDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F7FDE238ED80B000BBCA2 /* CatalogItemsDownloadService.swift */; };
 		FA8F7FE1238EDA10000BBCA2 /* JsonCachingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F7FE0238EDA10000BBCA2 /* JsonCachingServiceTests.swift */; };
 		FA8F7FE3238EDB20000BBCA2 /* Result+value+error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F7FE2238EDB20000BBCA2 /* Result+value+error.swift */; };
@@ -38,6 +38,7 @@
 		FAA3EDF7238EA11A00AF059A /* JsonCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF6238EA11A00AF059A /* JsonCachingService.swift */; };
 		FAA3EDF9238EA58400AF059A /* CatalogItemDSO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */; };
 		FAA3EDFB238EB3D900AF059A /* JsonDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDFA238EB3D900AF059A /* JsonDownloadService.swift */; };
+		FAB45730238EFB37007BE02E /* CatalogItemCachingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4572F238EFB37007BE02E /* CatalogItemCachingStub.swift */; };
 		FACE13C7238EB8360072477A /* CatalogItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE13C6238EB8360072477A /* CatalogItemDTO.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,8 +64,8 @@
 		FA29A3B4238ECFF70080873A /* TWCatalogueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWCatalogueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA29A3B6238ECFF70080873A /* CatalogInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogInteractorTests.swift; sourceTree = "<group>"; };
 		FA29A3B8238ECFF70080873A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDownloadServiceStub.swift; sourceTree = "<group>"; };
-		FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemCachingServiceStub.swift; sourceTree = "<group>"; };
+		FA29A3BE238ED0D20080873A /* CatalogItemsDownloadServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemsDownloadServiceStub.swift; sourceTree = "<group>"; };
+		FA29A3C0238ED1E50080873A /* CatalogItemCachingFaultyStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemCachingFaultyStub.swift; sourceTree = "<group>"; };
 		FA8F7FDE238ED80B000BBCA2 /* CatalogItemsDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemsDownloadService.swift; sourceTree = "<group>"; };
 		FA8F7FE0238EDA10000BBCA2 /* JsonCachingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonCachingServiceTests.swift; sourceTree = "<group>"; };
 		FA8F7FE2238EDB20000BBCA2 /* Result+value+error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+value+error.swift"; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		FAA3EDF6238EA11A00AF059A /* JsonCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonCachingService.swift; sourceTree = "<group>"; };
 		FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemDSO.swift; sourceTree = "<group>"; };
 		FAA3EDFA238EB3D900AF059A /* JsonDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDownloadService.swift; sourceTree = "<group>"; };
+		FAB4572F238EFB37007BE02E /* CatalogItemCachingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemCachingStub.swift; sourceTree = "<group>"; };
 		FACE13C6238EB8360072477A /* CatalogItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,8 +280,9 @@
 		FAB4572E238EF34C007BE02E /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
-				FA29A3BE238ED0D20080873A /* JsonDownloadServiceStub.swift */,
-				FA29A3C0238ED1E50080873A /* CatalogItemCachingServiceStub.swift */,
+				FA29A3BE238ED0D20080873A /* CatalogItemsDownloadServiceStub.swift */,
+				FA29A3C0238ED1E50080873A /* CatalogItemCachingFaultyStub.swift */,
+				FAB4572F238EFB37007BE02E /* CatalogItemCachingStub.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -472,8 +475,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA29A3B7238ECFF70080873A /* CatalogInteractorTests.swift in Sources */,
-				FA29A3C1238ED1E50080873A /* CatalogItemCachingServiceStub.swift in Sources */,
-				FA29A3BF238ED0D20080873A /* JsonDownloadServiceStub.swift in Sources */,
+				FAB45730238EFB37007BE02E /* CatalogItemCachingStub.swift in Sources */,
+				FA29A3C1238ED1E50080873A /* CatalogItemCachingFaultyStub.swift in Sources */,
+				FA29A3BF238ED0D20080873A /* CatalogItemsDownloadServiceStub.swift in Sources */,
 				FA8F7FE3238EDB20000BBCA2 /* Result+value+error.swift in Sources */,
 				FA8F7FE1238EDA10000BBCA2 /* JsonCachingServiceTests.swift in Sources */,
 				FA8F7FE5238EDC7D000BBCA2 /* String+random.swift in Sources */,
