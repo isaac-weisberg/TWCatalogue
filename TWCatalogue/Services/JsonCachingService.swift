@@ -1,24 +1,25 @@
 import Foundation
 import Dispatch
 
+enum JsonCachingReadError: Error {
+    case dataRead(Error)
+    case jsonDecoding(Error)
+}
+
+enum JsonCachingWriteError: Error {
+    case dataWrite(Error)
+    case jsonEncoding(Error)
+}
+
+
 class JsonCachingServiceAbstract<Model: Codable> {
     // Shitty pattern, right, but anyway
 
-    enum ReadError: Error {
-        case dataRead(Error)
-        case jsonDecoding(Error)
-    }
-
-    func read() -> Result<Model, ReadError> {
+    func read() -> Result<Model, JsonCachingReadError> {
         fatalError("Abstract class")
     }
 
-    enum WriteError: Error {
-        case dataWrite(Error)
-        case jsonEncoding(Error)
-    }
-
-    func write(_ model: Model) -> Result<Void, WriteError> {
+    func write(_ model: Model) -> Result<Void, JsonCachingWriteError> {
         fatalError("Abstract class")
     }
 }
@@ -33,7 +34,7 @@ class JsonCachingService<Model: Codable>: JsonCachingServiceAbstract<Model> {
             .appendingPathComponent(name)
     }
 
-    override func read() -> Result<Model, ReadError> {
+    override func read() -> Result<Model, JsonCachingReadError> {
         return queue.sync {
             let data: Data
             do {
@@ -51,7 +52,7 @@ class JsonCachingService<Model: Codable>: JsonCachingServiceAbstract<Model> {
         }
     }
 
-    override func write(_ model: Model) -> Result<Void, WriteError> {
+    override func write(_ model: Model) -> Result<Void, JsonCachingWriteError> {
         return queue.sync(flags: .barrier) {
             let data: Data
             do {

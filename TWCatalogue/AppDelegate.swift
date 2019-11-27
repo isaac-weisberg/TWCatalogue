@@ -10,8 +10,9 @@ import UIKit
 
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
+        let deps = DependenciesDefault()
 
-        appSubcription = AppCoordinator(view: window)
+        appSubcription = AppCoordinator(view: window, deps: deps)
             .start()
             .subscribe()
 

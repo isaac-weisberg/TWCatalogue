@@ -29,6 +29,8 @@
 		FAA3EDF5238EA0B400AF059A /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF4238EA0B400AF059A /* Dependencies.swift */; };
 		FAA3EDF7238EA11A00AF059A /* JsonCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF6238EA11A00AF059A /* JsonCachingService.swift */; };
 		FAA3EDF9238EA58400AF059A /* CatalogItemDSO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */; };
+		FAA3EDFB238EB3D900AF059A /* JsonDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDFA238EB3D900AF059A /* JsonDownloadService.swift */; };
+		FACE13C7238EB8360072477A /* CatalogItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE13C6238EB8360072477A /* CatalogItemDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		FAA3EDF4238EA0B400AF059A /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		FAA3EDF6238EA11A00AF059A /* JsonCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonCachingService.swift; sourceTree = "<group>"; };
 		FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemDSO.swift; sourceTree = "<group>"; };
+		FAA3EDFA238EB3D900AF059A /* JsonDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDownloadService.swift; sourceTree = "<group>"; };
+		FACE13C6238EB8360072477A /* CatalogItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 			children = (
 				FAA3EDDC238E84ED00AF059A /* CatalogItem.swift */,
 				FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */,
+				FACE13C6238EB8360072477A /* CatalogItemDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			children = (
 				FAA3EDF1238E9B5100AF059A /* DownloadService.swift */,
 				FAA3EDF6238EA11A00AF059A /* JsonCachingService.swift */,
+				FAA3EDFA238EB3D900AF059A /* JsonDownloadService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -321,8 +327,10 @@
 				FAA3EDEE238E965D00AF059A /* CatalogInteractor.swift in Sources */,
 				FAA3EDF7238EA11A00AF059A /* JsonCachingService.swift in Sources */,
 				FAA3EDF9238EA58400AF059A /* CatalogItemDSO.swift in Sources */,
+				FACE13C7238EB8360072477A /* CatalogItemDTO.swift in Sources */,
 				FAA3EDB8238E80AB00AF059A /* AppDelegate.swift in Sources */,
 				FAA3EDE8238E941200AF059A /* CatalogItemViewModel.swift in Sources */,
+				FAA3EDFB238EB3D900AF059A /* JsonDownloadService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
