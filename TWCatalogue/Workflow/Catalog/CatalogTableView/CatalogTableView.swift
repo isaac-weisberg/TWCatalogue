@@ -5,6 +5,9 @@ import UIKit
 private let identifier = "CatalogCell"
 
 class CatalogTableView: UITableView {
+    // Certainly would've went for RxDataSources.
+    // This time decided not to
+
     let items = BehaviorRelay<[CatalogItemViewModel]>(value: [])
     let disposeBag = DisposeBag()
 

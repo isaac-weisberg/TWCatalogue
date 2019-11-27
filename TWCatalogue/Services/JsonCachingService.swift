@@ -2,6 +2,8 @@ import Foundation
 import Dispatch
 
 class JsonCachingServiceAbstract<Model: Codable> {
+    // Shitty pattern, right, but anyway
+
     enum ReadError: Error {
         case dataRead(Error)
         case jsonDecoding(Error)
