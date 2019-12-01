@@ -7,7 +7,7 @@ enum DownloadError: Error {
 }
 
 protocol DownloadServiceProtocol {
-    func download(with request: URLRequest) -> Single<Result<(HTTPURLResponse, Data?), DownloadError>>
+    func download(with request: URLRequest) -> Observable<Result<(HTTPURLResponse, Data?), DownloadError>>
 }
 
 class DownloadService: DownloadServiceProtocol {
@@ -17,18 +17,21 @@ class DownloadService: DownloadServiceProtocol {
         self.urlSession = urlSession
     }
 
-    func download(with request: URLRequest) -> Single<Result<(HTTPURLResponse, Data?), DownloadError>> {
-        return Single.create { [urlSession] observer in
+    func download(with request: URLRequest) -> Observable<Result<(HTTPURLResponse, Data?), DownloadError>> {
+        return Observable.create { [urlSession] observer in
             let dataTask = urlSession.dataTask(with: request) { data, response, error in
                 if let error = error {
-                    observer(.success(.failure(.foundation(error))))
+                    observer.onNext(.failure(.foundation(error)))
+                    observer.onCompleted()
                     return
                 }
                 guard let response = response as? HTTPURLResponse else {
-                    observer(.success(.failure(.internalTypeInconsistency)))
+                    observer.onNext(.failure(.internalTypeInconsistency))
+                    observer.onCompleted()
                     return
                 }
-                observer(.success(.success((response, data))))
+                observer.onNext(.success((response, data)))
+                observer.onCompleted()
             }
 
             dataTask.resume()

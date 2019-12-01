@@ -13,7 +13,7 @@ class CatalogController: UIViewController {
         super.viewDidLoad()
 
         viewModel.catalogItems
-            .bind(to: tableView.items)
+            .subscribe(to: tableView.items)
             .disposed(by: disposeBag)
 
         viewModel.isLoading

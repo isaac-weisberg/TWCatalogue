@@ -2,7 +2,7 @@ import RxSwift
 import Foundation
 
 protocol CatalogItemsDownloadServiceProtocol {
-    func download(from url: URL) -> Single<Result<[CatalogItemDTO], JsonDownloadError>>
+    func download(from url: URL) -> Observable<Result<[CatalogItemDTO], JsonDownloadError>>
 }
 
 class CatalogItemsDownloadService: CatalogItemsDownloadServiceProtocol {
@@ -12,7 +12,7 @@ class CatalogItemsDownloadService: CatalogItemsDownloadServiceProtocol {
         self.jsonDownloadService = jsonDownloadService
     }
 
-    func download(from url: URL) -> Single<Result<[CatalogItemDTO], JsonDownloadError>> {
+    func download(from url: URL) -> Observable<Result<[CatalogItemDTO], JsonDownloadError>> {
         return jsonDownloadService.download(from: url)
     }
 }

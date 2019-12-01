@@ -79,11 +79,10 @@ class CatalogInteractor: CatalogInteractorProtocol {
     init(_ deps: Dependencies) {
         let downloadUrl = URL(string: "https://jsonplaceholder.typicode.com/posts")!
 
-        let download: Single<Result<[CatalogItemDTO], JsonDownloadError>>
-            = deps.catalogItemsDownloadService.download(from: downloadUrl)
+        let download = deps.catalogItemsDownloadService.download(from: downloadUrl)
 
-        let cacheWrite = { (items: [CatalogItem]) -> Single<Result<Void, JsonCachingWriteError>> in
-            Single.deferred {
+        let cacheWrite = { (items: [CatalogItem]) -> Observable<Result<Void, JsonCachingWriteError>> in
+            Observable.deferred {
                 let models = items.map { item in
                     CatalogItemDSO(model: item)
                 }
@@ -92,8 +91,8 @@ class CatalogInteractor: CatalogInteractorProtocol {
             }
         }
 
-        let cacheRead = Single<Result<[CatalogItem], JsonCachingReadError>>.deferred {
-            return .just(deps.catalogItemCachingService.read().map { dsos in
+        let cacheRead = Observable<Result<[CatalogItem], JsonCachingReadError>>.deferred {
+            .just(deps.catalogItemCachingService.read().map { dsos in
                 dsos.map { dso in
                     CatalogItem(dso: dso)
                 }
@@ -103,7 +102,7 @@ class CatalogInteractor: CatalogInteractorProtocol {
         let state = BehaviorSubject<State>(value: .idle)
 
         let downloadHappened = state
-            .flatMapLatest { state -> Single<[CatalogItem]> in
+            .flatMapLatest { state -> Observable<[CatalogItem]> in
                 switch state {
                 case .loading(let lastItems):
                     return .just(lastItems)
@@ -120,7 +119,7 @@ class CatalogInteractor: CatalogInteractorProtocol {
             .share(replay: 1)
 
         let downloadWasAFailure = downloadHappened
-            .flatMapLatest { result, lastItems -> Single<(JsonDownloadError, [CatalogItem])> in
+            .flatMapLatest { result, lastItems -> Observable<(JsonDownloadError, [CatalogItem])> in
                 switch result {
                 case .failure(let error):
                     return .just((error, lastItems))
@@ -149,7 +148,7 @@ class CatalogInteractor: CatalogInteractorProtocol {
 
 
         let downloadWasSuccessful = downloadHappened
-            .flatMapLatest { result, _ -> Single<[CatalogItem]> in
+            .flatMapLatest { result, _ -> Observable<[CatalogItem]> in
                 switch result {
                 case .success(let items):
                     let items = items.map { item in
@@ -205,12 +204,12 @@ class CatalogInteractor: CatalogInteractorProtocol {
             .distinctUntilChanged()
 
         noDataError = state
-            .flatMapLatest { state -> Single<CatalogInteractorNoDataError> in
+            .flatMapLatest { state -> Observable<CatalogInteractorNoDataError> in
                 switch state {
                 case .downloadFailed(reason: _, cacheRead: CatalogInteractor.State.CachingReadResult.failed):
                     return .just(CatalogInteractorNoDataError())
                 case .downloaded, .loading, .downloadFailed(reason: _, .success), .idle:
-                    return .never()
+                    return .empty()
                 }
             }
 

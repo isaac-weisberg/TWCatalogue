@@ -1,13 +1,17 @@
 PODS:
-  - RxCocoa (5.0.0):
+  - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
-  - RxRelay (5.0.0):
+  - RxRelay (5.0.1):
     - RxSwift (~> 5)
-  - RxSwift (5.0.0)
+  - RxSche (0.0.1):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxSwift (5.0.1)
 
 DEPENDENCIES:
   - RxCocoa
+  - RxSche (from `https://github.com/isaac-weisberg/RxSche.git`, branch `master`)
   - RxSwift
 
 SPEC REPOS:
@@ -16,11 +20,22 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
 
-SPEC CHECKSUMS:
-  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
-  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
-  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+EXTERNAL SOURCES:
+  RxSche:
+    :branch: master
+    :git: https://github.com/isaac-weisberg/RxSche.git
 
-PODFILE CHECKSUM: 6b5232796b229a914c192517aa6ff33e565b85e7
+CHECKOUT OPTIONS:
+  RxSche:
+    :commit: 6bde1a7f3355526416b37b17924fa991ff2cf140
+    :git: https://github.com/isaac-weisberg/RxSche.git
+
+SPEC CHECKSUMS:
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxSche: 62984651e098cd0f761da9fb05e2d6dde2104c9c
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+
+PODFILE CHECKSUM: 63fd0074b608a4dffe8b72bc379565a8c3041617
 
 COCOAPODS: 1.8.4

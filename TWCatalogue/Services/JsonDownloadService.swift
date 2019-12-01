@@ -9,7 +9,7 @@ enum JsonDownloadError: Error {
 }
 
 protocol JsonDownloadServiceProtocol {
-    func download<Model: Decodable>(from url: URL) -> Single<Result<Model, JsonDownloadError>>
+    func download<Model: Decodable>(from url: URL) -> Observable<Result<Model, JsonDownloadError>>
 }
 
 class JsonDownloadService: JsonDownloadServiceProtocol {
@@ -19,7 +19,7 @@ class JsonDownloadService: JsonDownloadServiceProtocol {
         self.downloadService = downloadService
     }
 
-    func download<Model: Decodable>(from url: URL) -> Single<Result<Model, JsonDownloadError>> {
+    func download<Model: Decodable>(from url: URL) -> Observable<Result<Model, JsonDownloadError>> {
         let request = URLRequest(url: url)
 
         return downloadService.download(with: request)

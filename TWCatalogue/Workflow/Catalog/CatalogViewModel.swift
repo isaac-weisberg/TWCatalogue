@@ -1,7 +1,8 @@
 import RxSwift
+import RxSche
 
 protocol CatalogViewModelProtocol {
-    var catalogItems: Observable<[CatalogItemViewModel]> { get }
+    var catalogItems: ScheduledSequence<[CatalogItemViewModel], MainScheduler> { get }
 
     var errorAlert: Observable<String> { get }
 
@@ -11,7 +12,7 @@ protocol CatalogViewModelProtocol {
 }
 
 struct CatalogViewModel: CatalogViewModelProtocol {
-    let catalogItems: Observable<[CatalogItemViewModel]>
+    let catalogItems: ScheduledSequence<[CatalogItemViewModel], MainScheduler>
 
     let errorAlert: Observable<String>
 
@@ -23,7 +24,6 @@ struct CatalogViewModel: CatalogViewModelProtocol {
 
     init(interactor: CatalogInteractorProtocol) {
         catalogItems = interactor.items
-            .observeOn(MainScheduler.instance)
             .map { items in
                 items.map { item in
                     let viewModel = CatalogItemViewModel(item)
@@ -38,7 +38,7 @@ struct CatalogViewModel: CatalogViewModelProtocol {
                     return viewModel
                 }
             }
-            .observeOn(MainScheduler.instance)
+            .scheduledObserveOn(MainScheduler.instance)
 
         isLoading = interactor.isLoading
             .observeOn(MainScheduler.instance)
