@@ -2,23 +2,21 @@ import UIKit
 import RxSwift
 import RxSche
 
-private let identifier = "CatalogCell"
-
 class CatalogTableViewDataSource: NSObject, UITableViewDataSource {
-    unowned let tableView: CatalogTableView
-
-    var items: ScheduledObserver<[CatalogItemViewModel], MainScheduler> {
-        return ScheduledObserver(onNext: { [unowned self] items in
-            self.dataSet = items
-            self.tableView.reloadData()
-        })
-    }
-
+    var disposeBag: DisposeBag!
     private var dataSet: [CatalogItemViewModel] = []
 
-    init(_ tableView: CatalogTableView) {
-        self.tableView = tableView
-        tableView.register(UINib(nibName: "CatalogCell", bundle: .main), forCellReuseIdentifier: identifier)
+    unowned var tableView: CatalogTableView!
+
+    func apply(items: ScheduledObservable<[CatalogItemViewModel], MainScheduler>) {
+        disposeBag = DisposeBag()
+
+        items
+            .subscribe(onNext: { [unowned self] items in
+                self.dataSet = items
+                self.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,7 +25,7 @@ class CatalogTableViewDataSource: NSObject, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = dataSet[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! CatalogCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CatalogCell.identifier, for: indexPath) as! CatalogCell
 
         cell.apply(viewModel: item)
 

@@ -7,14 +7,21 @@ class CatalogController: UIViewController {
 
     let disposeBag = DisposeBag()
 
-    @IBOutlet var tableView: CatalogTableView!
+    let tableView = CatalogTableView()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    init(viewModel: CatalogViewModelProtocol) {
+        super.init(nibName: nil, bundle: nil)
 
-        viewModel.catalogItems
-            .subscribe(to: tableView.theDataSource.items)
-            .disposed(by: disposeBag)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+
+        tableView.theDataSource.apply(items: viewModel.catalogItems)
 
         viewModel.isLoading
             .bind(onNext: { isLoading in
@@ -23,5 +30,9 @@ class CatalogController: UIViewController {
             .disposed(by: disposeBag)
 
         viewModel.reload.onNext(())
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("Fuck you")
     }
 }

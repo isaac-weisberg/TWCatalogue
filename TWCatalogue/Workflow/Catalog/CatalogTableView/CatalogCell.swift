@@ -2,6 +2,8 @@ import RxSwift
 import UIKit
 
 class CatalogCell: UITableViewCell {
+    static let identifier = "CatalogCell"
+
     var viewModel: CatalogItemViewModel!
     var disposeBag: DisposeBag!
 

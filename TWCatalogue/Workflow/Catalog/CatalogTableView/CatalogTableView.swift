@@ -8,19 +8,16 @@ class CatalogTableView: UITableView {
     // This time decided not to
     let disposeBag = DisposeBag()
 
-    lazy var theDataSource = CatalogTableViewDataSource(self)
+    let theDataSource = CatalogTableViewDataSource()
 
-    override init(frame: CGRect, style: UITableView.Style) {
-        super.init(frame: frame, style: style)
-        setup()
+    init() {
+        super.init(frame: .zero, style: .plain)
+        theDataSource.tableView = self
+        register(UINib(nibName: "CatalogCell", bundle: .main), forCellReuseIdentifier: CatalogCell.identifier)
+        dataSource = theDataSource
     }
 
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setup()
-    }
-
-    private func setup() {
-        dataSource = theDataSource
+        fatalError("Fuck you, decong views sucks")
     }
 }

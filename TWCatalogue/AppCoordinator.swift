@@ -19,8 +19,7 @@ class AppCoordinator {
         return Single.deferred { [view, deps] in
             let interactor = CatalogInteractor(deps)
             let viewModel = CatalogViewModel(interactor: interactor)
-            let controller = CatalogController.instantiateFromMain()
-            controller.viewModel = viewModel
+            let controller = CatalogController(viewModel: viewModel)
 
             interactor.navigation.detailRequested
                 .flatMapLatest { [unowned controller] item in
