@@ -38,6 +38,7 @@
 		FAA3EDF7238EA11A00AF059A /* JsonCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF6238EA11A00AF059A /* JsonCachingService.swift */; };
 		FAA3EDF9238EA58400AF059A /* CatalogItemDSO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */; };
 		FAA3EDFB238EB3D900AF059A /* JsonDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3EDFA238EB3D900AF059A /* JsonDownloadService.swift */; };
+		FAB1BBDF23941449006FF679 /* CatalogTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BBDE23941449006FF679 /* CatalogTableViewDataSource.swift */; };
 		FAB45730238EFB37007BE02E /* CatalogItemCachingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4572F238EFB37007BE02E /* CatalogItemCachingStub.swift */; };
 		FACE13C7238EB8360072477A /* CatalogItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE13C6238EB8360072477A /* CatalogItemDTO.swift */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 		FAA3EDF6238EA11A00AF059A /* JsonCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonCachingService.swift; sourceTree = "<group>"; };
 		FAA3EDF8238EA58400AF059A /* CatalogItemDSO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemDSO.swift; sourceTree = "<group>"; };
 		FAA3EDFA238EB3D900AF059A /* JsonDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDownloadService.swift; sourceTree = "<group>"; };
+		FAB1BBDE23941449006FF679 /* CatalogTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewDataSource.swift; sourceTree = "<group>"; };
 		FAB4572F238EFB37007BE02E /* CatalogItemCachingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemCachingStub.swift; sourceTree = "<group>"; };
 		FACE13C6238EB8360072477A /* CatalogItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,6 +256,7 @@
 				FAA3EDEB238E948B00AF059A /* CatalogCell.xib */,
 				FAA3EDE7238E941200AF059A /* CatalogItemViewModel.swift */,
 				FAA3EDE5238E93BF00AF059A /* CatalogTableView.swift */,
+				FAB1BBDE23941449006FF679 /* CatalogTableViewDataSource.swift */,
 			);
 			path = CatalogTableView;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB1BBDF23941449006FF679 /* CatalogTableViewDataSource.swift in Sources */,
 				FAA3EDDD238E84ED00AF059A /* CatalogItem.swift in Sources */,
 				FAA3EDF2238E9B5100AF059A /* DownloadService.swift in Sources */,
 				FAA3EDCC238E812200AF059A /* AppCoordinator.swift in Sources */,

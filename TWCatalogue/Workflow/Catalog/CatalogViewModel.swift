@@ -2,7 +2,7 @@ import RxSwift
 import RxSche
 
 protocol CatalogViewModelProtocol {
-    var catalogItems: ScheduledSequence<[CatalogItemViewModel], MainScheduler> { get }
+    var catalogItems: ScheduledObservable<[CatalogItemViewModel], MainScheduler> { get }
 
     var errorAlert: Observable<String> { get }
 
@@ -12,7 +12,7 @@ protocol CatalogViewModelProtocol {
 }
 
 struct CatalogViewModel: CatalogViewModelProtocol {
-    let catalogItems: ScheduledSequence<[CatalogItemViewModel], MainScheduler>
+    let catalogItems: ScheduledObservable<[CatalogItemViewModel], MainScheduler>
 
     let errorAlert: Observable<String>
 

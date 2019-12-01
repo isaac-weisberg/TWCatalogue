@@ -27,7 +27,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   RxSche:
-    :commit: 6bde1a7f3355526416b37b17924fa991ff2cf140
+    :commit: e338d7cd619218593d672427c81791ffc6c96d0e
     :git: https://github.com/isaac-weisberg/RxSche.git
 
 SPEC CHECKSUMS:
