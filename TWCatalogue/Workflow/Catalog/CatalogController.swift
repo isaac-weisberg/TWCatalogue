@@ -38,5 +38,21 @@ class CatalogController: UIViewController {
                 })
                 .disposed(by: self.disposeBag)
         }
+
+        DispatchQueue(label: "start merge", attributes: .concurrent).async {
+            let one = Observable.just(())
+                .observeOn(MainScheduler.instance)
+            let two = Observable.just(())
+//                .observeOn(ConcurrentDispatchQueueScheduler.init(queue: .init(label: "asdf1", attributes: .concurrent)))
+//                .delay(.milliseconds(40), scheduler: ConcurrentDispatchQueueScheduler.init(queue: .init(label: "asdf1", attributes: .concurrent)))
+
+            Observable
+                .merge(one, two)
+//                .subscribeOn(ConcurrentDispatchQueueScheduler(queue: .global()))
+                .subscribe(onNext: { void in
+                    print(void)
+                })
+                .disposed(by: self.disposeBag)
+        }
     }
 }
